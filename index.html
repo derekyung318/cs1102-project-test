@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large-Scale Recommender Systems | CS1102</title>
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .navbar { transition: all 0.4s ease; }
+        .navbar.hidden { transform: translateY(-100%); }
+        
+        .hero {
+            background: linear-gradient(135deg, #0066ff, #8a2be2, #ff00cc);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            padding: 130px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.18);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p.lead {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.95;
+        }
+
+        .explore-btn {
+            padding: 16px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.4);
+        }
+
+        .explore-btn:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(138, 43, 226, 0.5);
+        }
+
+                /* Back to Top Button */
+        #backToTop {
+            transition: all 0.3s ease;
+        }
+        #backToTop:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(13, 110, 253, 0.4);
+        }
+        #backToTop.show {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <!-- CityU Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="https://www.cityu.edu.hk/" target="_blank">
+                <img src="images/cityu-logo.png" alt="CityU HK" height="65">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="2.html">Pros & Cons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="3.html">Real-World Examples</a></li>
+                    <li class="nav-item"><a class="nav-link" href="4.html">Future Development</a></li>
+                    <li class="nav-item"><a class="nav-link" href="5.html">Ethical Issues</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero text-center">
+        <div class="container hero-content">
+            <h1 class="mb-3">Large-Scale Recommender Systems in Business Applications</h1>
+            <p class="lead fs-4 mb-5">CS1102 - Course Project - 2025 / 2026 Semester B</p>
+            <a href="2.html" class="btn btn-light explore-btn">
+                Explore Now →
+            </a>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="sticky-top" style="top: 20px;">
+                    <div class="bg-primary text-white p-3 rounded-top">
+                        <h5 class="mb-0">Quick Navigation</h5>
+                    </div>
+                    <div class="sidebar-card card border-0 shadow-sm mb-3">
+                        <div class="card-body">
+                            <a href="2.html" class="text-decoration-none text-dark d-flex align-items-center">
+                                <i class="bi bi-bar-chart-fill me-3 fs-4 text-primary"></i>
+                                <div>
+                                    <strong>Pros & Cons</strong><br>
+                                    <small class="text-muted">5 types of recommender systems</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar-card card border-0 shadow-sm mb-3">
+                        <div class="card-body">
+                            <a href="3.html" class="text-decoration-none text-dark d-flex align-items-center">
+                                <i class="bi bi-briefcase-fill me-3 fs-4 text-primary"></i>
+                                <div>
+                                    <strong>Real-World Examples</strong><br>
+                                    <small class="text-muted">Amazon, Netflix, Spotify...</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar-card card border-0 shadow-sm mb-3">
+                        <div class="card-body">
+                            <a href="4.html" class="text-decoration-none text-dark d-flex align-items-center">
+                                <i class="bi bi-lightbulb-fill me-3 fs-4 text-primary"></i>
+                                <div>
+                                    <strong>Future Development</strong><br>
+                                    <small class="text-muted">LLM + New Trends</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sidebar-card card border-0 shadow-sm mb-3">
+                        <div class="card-body">
+                            <a href="5.html" class="text-decoration-none text-dark d-flex align-items-center">
+                                <i class="bi bi-shield-lock-fill me-3 fs-4 text-primary"></i>
+                                <div>
+                                    <strong>Ethical Issues</strong><br>
+                                    <small class="text-muted">Privacy & Filter Bubble</small>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+
+                <!-- Group Members -->
+                <div class="card shadow-sm mb-5">
+                    <div class="card-header bg-white">
+                        <h2 class="section-title mb-0">Group Members</h2>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item fs-6">YUNG, Wai Kuen - 58114491</li>
+                        <li class="list-group-item fs-6">CHANG, Ka Ho - 58538933</li>
+                        <li class="list-group-item fs-6">CHUI, Hau Yi - 59294380</li>
+                        <li class="list-group-item fs-6">CHANG, Tsz Chung - 58718041</li>
+                    </ul>
+                </div>
+
+                <!-- Topic -->
+                <div class="card shadow-sm mb-5">
+                    <div class="card-header bg-white">
+                        <h2 class="section-title mb-0">Project Topic</h2>
+                    </div>
+                    <div class="card-body">
+                        <p class="fs-3 fw-semibold text-primary mb-0">
+                            Large-Scale Recommender Systems in Business Applications
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Techniques -->
+                <div class="card shadow-sm mb-5">
+                    <div class="card-header bg-white">
+                        <h2 class="section-title mb-0">Techniques We Demonstrated</h2>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">✅ HTML5 + Bootstrap 5 Responsive Design</li>
+                            <li class="list-group-item">✅ Multi-page Navigation & Sidebar</li>
+                            <li class="list-group-item">✅ Vanilla JavaScript Interactivity</li>
+                            <li class="list-group-item">✅ Image Display & Modern Layout</li>
+                            <li class="list-group-item">✅ Interactive Quiz</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Discovery -->
+                <div class="card shadow-sm mb-5 bg-light">
+                    <div class="card-body">
+                        <h2 class="section-title mb-3"><i class="bi bi-lightbulb"></i> Our Discovery</h2>
+                        <p class="lead">
+                            Through building this website, we discovered that different recommender systems have distinct trade-offs. 
+                            While collaborative filtering provides serendipity, it suffers from cold-start problems. 
+                            Hybrid models can overcome many limitations but require careful design and higher maintenance costs. 
+                            We also learned that ethical concerns like filter bubbles and privacy are not just theoretical — they directly impact user experience and trust.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- References -->
+                <div class="card shadow-sm mb-5">
+                    <div class="card-header bg-white">
+                        <h2 class="section-title mb-0">References</h2>
+                    </div>
+                    <div class="card-body">
+                        <ol>
+                            <li>Recommender Systems Handbook — <a href="https://www.springer.com/gp/book/9781489976376" target="_blank">Springer</a></li>
+                            <li>Amazon Science: Recommendations — <a href="https://www.amazon.science" target="_blank">Amazon Science</a></li>
+                            <li>Netflix: The Netflix Recommender System — <a href="https://research.netflix.com" target="_blank">Netflix Research</a></li>
+                            <li>Spotify Engineering: How We Built a Recommender System — <a href="https://engineering.atspotify.com" target="_blank">Spotify</a></li>
+                            <li>ACM Digital Library: Filter Bubbles and Ethical Challenges — <a href="https://dl.acm.org" target="_blank">ACM</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Cover Image -->
+                <div class="text-center mb-5">
+                    <img src="images/cover.jpg" alt="Recommender System" class="img-fluid rounded-4 shadow" style="max-height: 420px;">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-5 mt-5">
+        <div class="container">
+            <p class="mb-1">CS1102 - Course Project - 2025/2026 Semester B</p>
+            <p class="mb-0">Group Members: YUNG, Wai Kuen • CHANG, Ka Ho • CHUI, Hau Yi • CHANG, Tsz Chung</p>
+        </div>
+    </footer>
+
+        <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary rounded-circle shadow-lg position-fixed bottom-0 end-0 m-4" 
+            style="width: 55px; height: 55px; display: none; z-index: 1000;">
+        <i class="bi bi-arrow-up fs-3"></i>
+    </button>
+
+    <!-- Bootstrap JS + JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
