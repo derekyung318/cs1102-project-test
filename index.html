@@ -16,6 +16,12 @@
         body { font-family: 'Poppins', sans-serif; }
         .navbar { transition: all 0.4s ease; }
         .navbar.hidden { transform: translateY(-100%); }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
         
         .hero {
             background: linear-gradient(135deg, #0066ff, #8a2be2, #ff00cc);
@@ -123,7 +129,7 @@
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="container mt-5 flex-grow-1">
         <div class="row">
 
             <!-- Sidebar -->
