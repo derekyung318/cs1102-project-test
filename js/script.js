@@ -1,6 +1,3 @@
-// script.js
-
-// Navbar
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
@@ -14,7 +11,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Back to Top
 const backToTopBtn = document.getElementById('backToTop');
 
 if (backToTopBtn) {
