@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Poppins', sans-serif; }
-        body { display: flex; flex-direction: column; min-height: 100vh; }
         .navbar { transition: all 0.4s ease; }
         .navbar.hidden { transform: translateY(-100%); }
         .hero { background: linear-gradient(135deg, #0066ff, #8a2be2, #ff00cc); background-size: 400% 400%; animation: gradientShift 15s ease infinite; color: white; padding: 100px 0 80px; }
@@ -32,7 +31,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="2.html">Pros & Cons</a></li>
-                    <li class="nav-item"><a class="nav-link" href="3.html">Real-World Examples</a></li>
+                    <li class="nav-item"><a class="nav-link" href="3.html">Practical Use</a></li>
                     <li class="nav-item"><a class="nav-link" href="4.html">Future Development</a></li>
                     <li class="nav-item"><a class="nav-link active" href="5.html">Ethical Issues</a></li>
                     <li class="nav-item"><a class="nav-link" href="quiz.html">Quiz</a></li>
@@ -44,19 +43,19 @@
     <!-- Hero -->
     <div class="hero text-center">
         <div class="container">
-            <h1 class="mb-3">Ethical Issues</h1>
+            <h1 class="mb-3 display-4 fw-bold">Ethical Issues</h1>
             <p class="lead fs-4">in Recommender Systems</p>
         </div>
     </div>
 
-    <div class="container mt-5 flex-grow-1">
+    <div class="container mt-5">
         <div class="row">
             <!-- Sidebar -->
             <div class="col-lg-3">
                 <div class="sticky-top" style="top: 20px;">
                     <div class="bg-primary text-white p-3 rounded-top"><h5 class="mb-0">Quick Navigation</h5></div>
                     <div class="card border-0 shadow-sm mb-3"><div class="card-body"><a href="2.html" class="text-decoration-none text-dark d-flex align-items-center"><i class="bi bi-bar-chart-fill me-3 fs-4 text-primary"></i><strong>Pros & Cons</strong></a></div></div>
-                    <div class="card border-0 shadow-sm mb-3"><div class="card-body"><a href="3.html" class="text-decoration-none text-dark d-flex align-items-center"><i class="bi bi-briefcase-fill me-3 fs-4 text-primary"></i><strong>Real-World Examples</strong></a></div></div>
+                    <div class="card border-0 shadow-sm mb-3"><div class="card-body"><a href="3.html" class="text-decoration-none text-dark d-flex align-items-center"><i class="bi bi-briefcase-fill me-3 fs-4 text-primary"></i><strong>Practical Use</strong></a></div></div>
                     <div class="card border-0 shadow-sm mb-3"><div class="card-body"><a href="4.html" class="text-decoration-none text-dark d-flex align-items-center"><i class="bi bi-lightbulb-fill me-3 fs-4 text-primary"></i><strong>Future Development</strong></a></div></div>
                     <div class="card border-0 shadow-sm mb-3"><div class="card-body"><a href="5.html" class="text-decoration-none text-dark d-flex align-items-center"><i class="bi bi-shield-lock-fill me-3 fs-4 text-primary"></i><strong>Ethical Issues</strong></a></div></div>
                 </div>
@@ -64,35 +63,44 @@
 
             <!-- Main Content -->
             <div class="col-lg-9">
-                <h2 class="mb-4">Major Ethical Concerns</h2>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5>1. Filter Bubble & Echo Chamber</h5>
-                        <p>Users only see content that matches their existing views, reducing diversity of thought.</p>
-                    </div>
-                </div>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5>2. Privacy Issues</h5>
-                        <p>Systems collect massive amounts of personal data to make accurate recommendations.</p>
-                    </div>
-                </div>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5>3. Bias and Fairness</h5>
-                        <p>Algorithms may reinforce gender, racial, or cultural biases present in training data.</p>
-                    </div>
-                </div>
-                <div class="card mb-4">
-                    <div class="card-body">
-                        <h5>4. Manipulation & Addiction</h5>
-                        <p>Designed to maximize engagement, sometimes at the cost of user well-being.</p>
-                    </div>
-                </div>
+                <h2 class="mb-4">Major Ethical Concerns in Recommender Systems</h2>
+
+                <h4>Hallucination / Misinformation / Manipulation</h4>
+                <ul>
+                    <li>False or misleading information caused by misinterpretation of relationships, probabilities or correlations, resulting in illogical or misleading information</li>
+                    <li>Deepfakes, audio and video manipulation could also be done</li>
+                </ul>
+
+                <h4>Bias / Discrimination</h4>
+                <ul>
+                    <li>Without human-in-the-loop or guidance from supervised/reinforcement learnings, LLMs may (mis)interpret correlations or observe unethical actions and output as results, causing bias or discrimination to exist; Examples include Apple’s providing ladies lower credit limits than gentlemen without proper reason</li>
+                </ul>
+
+                <h4>Opacity / Black-box</h4>
+                <ul>
+                    <li>Unknown algorithms or mechanisms due to “Black-box” issue, causing the users or developers to only recognize the input/output; Such opacity in ML/LLMs may result in low transparency, leading to unpredictable or uninterpretable logic</li>
+                </ul>
+
+                <h4>Lack of Robustness / Hack</h4>
+                <ul>
+                    <li>LLMs consist of levels of data structuring and deep learning layers or thought processes, which without proper layers or algorithms to conduct adversarial training or noise injection, there will be perturbations or attacks that either destroy, info-steal or manipulate the LLMs</li>
+                    <li>However, robustness may come at a cost of higher overfitting or worsened performance, and is also requiring higher computational cost</li>
+                </ul>
+
+                <h4>Unjustified usage of sources / Privacy and Data Usage</h4>
+                <ul>
+                    <li>Many sources or information used to train LLMs may be obtained through opaque or restrictive “Term of Usages”, or even are obtained without the users or producers’ consents, leading to a potential intellectual property infringement</li>
+                    <li>Some other information may also include personal information or sensitive data which might result in privacy or confidential breaches after regeneration of outputs after training the model</li>
+                </ul>
+
+                <h4>Economic / Social Impact</h4>
+                <ul>
+                    <li>LLM technology can lead to repetitive or brainstorming jobs being removed as LLMs can either conduct or generate such items; Also, existing environment may be impacted by LLMs as seen from above part where companies have to adapt LLMs into daily usage, leading to new skillset or resource requirements needed in the market</li>
+                </ul>
 
                 <!-- Back & Next -->
                 <div class="d-flex justify-content-between mt-5 border-top pt-4">
-                    <a href="4.html" class="btn btn-outline-primary btn-lg">← Back: Future Development</a>
+                    <a href="4.html" class="btn btn-outline-primary btn-lg">← Back to Future Development</a>
                     <a href="quiz.html" class="btn btn-primary btn-lg">Next: Take the Quiz →</a>
                 </div>
             </div>
@@ -103,7 +111,7 @@
     <footer class="bg-dark text-white text-center py-5 mt-5">
         <div class="container">
             <p class="mb-1">CS1102 - Course Project - 2025/2026 Semester B</p>
-            <p class="mb-0">Group Members: YUNG, Wai Kuen • CHANG, Ka Ho • CHUI, Hau Yi • CHANG, Tsz Chung</p>
+            <p class="mb-0">Group Members: YUNG, Wai Kuen • CHANG, Ka Ho • CHUI, Hau Yi • Student 4</p>
         </div>
     </footer>
 
