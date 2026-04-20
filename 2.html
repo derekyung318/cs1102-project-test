@@ -38,7 +38,7 @@
     <div class="hero text-center">
         <div class="container">
             <h1 class="mb-3 display-4 fw-bold">Pros & Cons</h1>
-            <p class="lead fs-4">of Recommendation Systems</p>
+            <p class="lead fs-4">of Recommender Systems</p>
         </div>
     </div>
 
@@ -79,7 +79,7 @@
                         <p>Popularity-based recommendation is suitable for new users because it does not require any past user behavior. In addition, it is simpler in design and thus involves relatively low cost in comparison to other recommender systems.</p>
                         
                         <strong>Weakness</strong>
-                        <p>On the other hand, popularity-based recommendation is unable to bring meaningful experience to the users since no personalization is made and it cannot delve into users’ deep interests. Also, unpopular items are ignored and only popular items can be exposed in this system, which might cause polarization in recommending.</p>
+                        <p>On the other hand, popularity-based recommendation is unable to bring meaningful experience to the users since no personalization is made and it cannot delve into users' deep interests. Also, unpopular items are ignored and only popular items can be exposed in this system, which might cause polarization in recommending.</p>
                         
                         <strong>Examples:</strong> 
                         <ul>
@@ -91,13 +91,13 @@
                     <!-- Content-based -->
                     <div class="tab-pane fade" id="cbf">
                         <h4>Content-based Filtering</h4>
-                        <p>Content-based filtering (CBF) constructs users’ preference profile through tracking and analyzing what users were interested in and liked in the past. It recommends items that match users’ preference profile.</p>
+                        <p>Content-based filtering (CBF) constructs users' preference profile through tracking and analyzing what users were interested in and liked in the past. It recommends items that match users' preference profile.</p>
                         
                         <strong>Strength</strong>
-                        <p>CBF prevents the first-rater problem (also known as new-item cold-start problem), which is the situation where a new or unpopular item cannot be recommended because of a lack of user feedback. It is because the profiles are constructed by relying on an individual's past behaviors only, and there is no requirement to track other users’ behaviors. Items will be recommended once they match the users’ preference profile. In addition, it has high transparency in stating the recommended reasons for items, which helps in building customers’ trust in the recommendation.</p>
+                        <p>CBF prevents the first-rater problem (also known as new-item cold-start problem), which is the situation where a new or unpopular item cannot be recommended because of a lack of user feedback. It is because the profiles are constructed by relying on an individual's past behaviors only, and there is no requirement to track other users' behaviors. Items will be recommended once they match the users' preference profile. In addition, it has high transparency in stating the recommended reasons for items, which helps in building customers' trust in the recommendation.</p>
                         
                         <strong>Weakness</strong>
-                        <p>First, CBF might result in new-user cold-start problems, which means it might be unable to provide capable recommendations to new users, as it requires an individual's past ratings on different items for profiling. Second, serendipity problems may arise. It means users might find it hard to get recommendations that are inconsistent with the users’ preference profile, resulting in a lack of serendipity. Additionally, items with obscure classification might not be effectively recommended because the system cannot properly match them with users’ profile.</p>
+                        <p>First, CBF might result in new-user cold-start problems, which means it might be unable to provide capable recommendations to new users, as it requires an individual's past ratings on different items for profiling. Second, serendipity problems may arise. It means users might find it hard to get recommendations that are inconsistent with the users' preference profile, resulting in a lack of serendipity. Additionally, items with obscure classification might not be effectively recommended because the system cannot properly match them with users' profile.</p>
                         
                         <strong>Examples:</strong> 
                         <ul>
@@ -109,13 +109,13 @@
                     <!-- Collaborative -->
                     <div class="tab-pane fade" id="cf">
                         <h4>Collaborative Filtering</h4>
-                        <p>In contrast to content-based filtering, collaborative filtering (CF) leverages users’ ratings on items. The system identifies the association between users and items by using the user-item rating matrix. Items are recommended based on what similar users liked. In other words, users receive recommendations of items based on what other users with similar interests like, or receive recommendations of other users based on having similar ratings on items.</p>
+                        <p>In contrast to content-based filtering, collaborative filtering (CF) leverages users' ratings on items. The system identifies the association between users and items by using the user-item rating matrix. Items are recommended based on what similar users liked. In other words, users receive recommendations of items based on what other users with similar interests like, or receive recommendations of other users based on having similar ratings on items.</p>
                         
                         <strong>Strength</strong>
-                        <p>Since ratings are made by human users in CF, this allows feature evaluation on items which can indirectly reflect features such as plot tensions that are difficult to be grasped or quantified by machine learning. Moreover, CF provides a sense of serendipity to users by recommending unexpected items. As the system provides recommendations by applying user-based algorithms, rather than focusing on the items’ content, duplicated recommendations tend to be reduced. Novelty is thus enhanced.</p>
+                        <p>Since ratings are made by human users in CF, this allows feature evaluation on items which can indirectly reflect features such as plot tensions that are difficult to be grasped or quantified by machine learning. Moreover, CF provides a sense of serendipity to users by recommending unexpected items. As the system provides recommendations by applying user-based algorithms, rather than focusing on the items' content, duplicated recommendations tend to be reduced. Novelty is thus enhanced.</p>
                         
                         <strong>Weakness</strong>
-                        <p>CF heavily relies on prior users’ ratings and faces the cold-start problem for both new users and new items. Without prior ratings, the system cannot provide suitable recommendations. In addition, it is vulnerable to shilling attacks, in which the ratings of specific items are intentionally and artificially manipulated by malicious users. Furthermore, it is inapplicable in realms where items are swiftly updated or changed. Ratings might be insufficiently collected within a short time window, or may become obsolete.</p>
+                        <p>CF heavily relies on prior users' ratings and faces the cold-start problem for both new users and new items. Without prior ratings, the system cannot provide suitable recommendations. In addition, it is vulnerable to shilling attacks, in which the ratings of specific items are intentionally and artificially manipulated by malicious users. Furthermore, it is inapplicable in realms where items are swiftly updated or changed. Ratings might be insufficiently collected within a short time window, or may become obsolete.</p>
                         
                         <strong>Examples:</strong> 
                         <ul>
@@ -127,10 +127,10 @@
                     <!-- Knowledge-based -->
                     <div class="tab-pane fade" id="kbr">
                         <h4>Knowledge-based Recommendation</h4>
-                        <p>Knowledge-based recommendation (KBR) analyzes users’ needs, preferences and constraints to recommend items that fit the best with users' demand. Normally, initial input from users is required.</p>
+                        <p>Knowledge-based recommendation (KBR) analyzes users' needs, preferences and constraints to recommend items that fit the best with users' demand. Normally, initial input from users is required.</p>
                         
                         <strong>Strength</strong>
-                        <p>The KBR system provides highly personalized experience and supports fields that are sophisticated and risky, such as finance and real estate. The recommendations strictly refer to existing knowledge in the system and take users’ demands into consideration. When there are conflicts between demand and constraints, the system can still provide recommendations with clear explanations to avoid the situation of no identifiable solution. Additionally, it can adapt to the changes of users’ preference over time since users can update their needs through dialogic interaction in the system.</p>
+                        <p>The KBR system provides highly personalized experience and supports fields that are sophisticated and risky, such as finance and real estate. The recommendations strictly refer to existing knowledge in the system and take users' demands into consideration. When there are conflicts between demand and constraints, the system can still provide recommendations with clear explanations to avoid the situation of no identifiable solution. Additionally, it can adapt to the changes of users' preference over time since users can update their needs through dialogic interaction in the system.</p>
                         
                         <strong>Weakness</strong>
                         <p>It could involve high cost and be time-consuming because the construction of a knowledge base requires collaboration with professionals in order to ensure the system can provide useful and constructive recommendations without significant errors. The maintenance of data and updating can be costly as well to ensure that the knowledge base is correct and keeps up with times.</p>
@@ -148,7 +148,7 @@
                         <p>Hybrid filtering combines different recommender systems to complement each other and to increase effectiveness in recommending. The most common combination is content-based filtering and collaborative filtering.</p>
                         
                         <strong>Strength</strong>
-                        <p>Hybrid filtering reduces the limitations such as cold-start issues that occur when applying a single recommender system by having multiple systems collaboration. It enhances the quality and accuracy of the recommendations, as well as the users’ experience.</p>
+                        <p>Hybrid filtering reduces the limitations such as cold-start issues that occur when applying a single recommender system by having multiple systems collaboration. It enhances the quality and accuracy of the recommendations, as well as the users' experience.</p>
                         
                         <strong>Weakness</strong>
                         <p>However, applying multiple systems could be sophisticated, requiring huge input in designing and optimization. Also, it might be costly in data maintenance because of the large data size. Poor integration and insufficient input might result in low efficiency.</p>
