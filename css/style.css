@@ -45,7 +45,7 @@ body {
 }
 
 .btn:hover,
-.card:hover:not(.group-card):not(.topic-card):not(.tech-card):not(.dis-card):not(.ref-card) {
+.card:hover:not(.group-card):not(.topic-card):not(.tech-card):not(.intro-card):not(.his-card):not(.dis-card):not(.ref-card)not(.start-card):not(.quiz-card):not(.result-card) {
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(138, 43, 226, 0.25);
 }

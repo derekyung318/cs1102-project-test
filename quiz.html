@@ -63,7 +63,7 @@
             <div class="col-lg-9 fade-in">
                 <!-- Start Screen -->
                 <div id="startScreen">
-                    <div class="card shadow-sm text-center p-5">
+                    <div class="card start-card shadow-sm text-center p-5">
                         <h2 class="mb-4">Are you ready for the quiz?</h2>
                         <p class="lead mb-5">5 multiple-choice questions about Recommender Systems</p>
                         <button id="startBtn" class="btn btn-primary btn-lg px-5 py-3">Yes, Start the Quiz!</button>
@@ -81,7 +81,7 @@
                             <div id="progressBar" class="progress-bar bg-primary" style="width: 20%;"></div>
                         </div>
                     </div>
-                    <div id="questionArea" class="card shadow-sm p-4"></div>
+                    <div id="questionArea" class="card quiz-card shadow-sm p-4 fade-in"></div>
 
                     <div class="d-flex justify-content-between mt-4">
                         <button id="prevBtn" class="btn btn-outline-primary">← Previous</button>
@@ -90,7 +90,7 @@
                 </div>
 
                 <!-- Result -->
-                <div id="resultScreen" class="d-none card shadow-sm p-5 text-center">
+                <div id="resultScreen" class="d-none card result-card shadow-sm p-5 text-center fade-in">
                     <h2 class="mb-4">Quiz Completed!</h2>
 
                     <div id="perfectScore" class="d-none mb-4">
@@ -108,6 +108,14 @@
                         <a href="index.html" class="btn btn-outline-primary btn-lg">Back to Home</a>
                         <button id="retakeBtn" class="btn btn-success btn-lg">Retake Quiz</button>
                     </div>
+                </div>
+
+                <!-- Cover Image -->
+                <div class="text-center mt-4 mb-5">
+                    <img src="images/quiz-cover.jpg" 
+                         alt="Recommender Systems Quiz" 
+                         class="img-fluid rounded-4 shadow-lg"
+                         style="max-height: 380px; object-fit: cover; width: 100%;">
                 </div>
             </div>
         </div>
@@ -161,6 +169,9 @@
             html += `</div><button id="submitBtn" class="btn btn-primary mt-4 w-100">Submit Answer</button>`;
             questionArea.innerHTML = html;
             document.getElementById('submitBtn').addEventListener('click', submitAnswer);
+            questionArea.classList.remove('fade-in');
+            void questionArea.offsetWidth;        
+            questionArea.classList.add('fade-in');
         }
 
         function submitAnswer() {
@@ -221,6 +232,9 @@
                     </div>`;
             });
             document.getElementById('reviewArea').innerHTML = reviewHTML;
+            resultScreen.classList.remove('fade-in');
+            void resultScreen.offsetWidth;
+            resultScreen.classList.add('fade-in');
         }
 
         function restartQuiz() {
